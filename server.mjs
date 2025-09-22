@@ -6,7 +6,7 @@ import log from './middleware/loggingMiddleware.mjs'
 import connectDB from './database/conn.mjs';
 import ownerRoutes from './routes/ownerRoutes.mjs';
 import trainerRoutes from './routes/trainerRoutes.mjs';
-
+import serivecDogRoutes from './routes/serviceDogRoutes.mjs' 
 
 
 //Setups 
@@ -22,7 +22,7 @@ app.use(log);
 
 
 // Routes
-app.use("/api/serviceDog",seriveDogRoutes);
+app.use("/api/serviceDog", serivecDogRoutes);
 app.use('/api/owners', ownerRoutes);
 app.use('/api/trainers', trainerRoutes);
 
