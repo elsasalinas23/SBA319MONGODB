@@ -2,14 +2,13 @@ import express from "express";
 import serviceDog from "../models/serviceDogSchema.mjs";
 const router = express.Router();
 
-// Get animals by habitat
+
 router.get("/habitat/:hab", async (req, res) => {
   let result = await serviceDog.inHabitat(req.params.hab);
 
   res.json(result);
 });
 
-// Get animals with a similar habitat
 router.get("/eco/:id", async (req, res) => {
   try {
     let animal = await serviceDog.findById(req.params.id);

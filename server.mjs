@@ -4,6 +4,8 @@ import dotenv from 'dotenv';
 import globalErr from './middleware/globalErr.mjs';
 import log from './middleware/loggingMiddleware.mjs'
 import connectDB from './database/conn.mjs';
+import ownerRoutes from './routes/ownerRoutes.mjs';
+import trainerRoutes from './routes/trainerRoutes.mjs';
 
 
 
@@ -21,6 +23,8 @@ app.use(log);
 
 // Routes
 app.use("/api/serviceDog",seriveDogRoutes);
+app.use('/api/owners', ownerRoutes);
+app.use('/api/trainers', trainerRoutes);
 
 // Erro Handling Middleware
 app.use(globalErr)
