@@ -1,5 +1,5 @@
 import express from "express";
-import serviceDog from "../models/serviceDog.mjs";
+import serviceDog from "../models/serviceDogSchema.mjs";
 const router = express.Router();
 
 // Get animals by habitat

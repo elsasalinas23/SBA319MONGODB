@@ -10,3 +10,6 @@ const ServiceDogschema = new mongoose.Schema({
 
 
 export default mongoose.model("Smart Puppies",ServiceDogschemam);
+
+ServiceDogschema.index({species: 1})
+ServiceDogschema.index({habitat: 1})

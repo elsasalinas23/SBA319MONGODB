@@ -20,7 +20,7 @@ app.use(log);
 
 
 // Routes
-
+app.use("/api/serviceDog",seriveDogRoutes);
 
 // Erro Handling Middleware
 app.use(globalErr)
